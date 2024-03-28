@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  labels:
+    {{- include "juiceshop.selectorLabels" . | nindent 4 }}
+data:
+  config.yml: |
+    ctf.yml: |
+    application:
+      logo: JuiceShopCTF_Logo.png
+      favicon: favicon_ctf.ico
+      showVersionNumber: false
+      showGitHubLinks: false
+      localBackupEnabled: false
+      welcomeBanner:
+        showOnFirstStart: false
+    challenges:
+      showHints: false
+      safetyOverride: true
+      showFeedbackButtons: false
+    hackingInstructor:
+      isEnabled: false
+    ctf:
+      showFlagsInNotifications: true

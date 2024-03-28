@@ -1,0 +1,18 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg-{{ .Release.Name }}
+spec:
+  instances: {{ .Values.instances }}
+  imageName: {{ .Values.postgres.image }}:{{ .Values.postgres.version }}
+
+  storage:
+    size: 1Gi
+
+  resources:
+    requests:
+      memory: "32Mi"
+      cpu: "50m"
+    limits:
+      memory: "128Mi"
+      cpu: "100m"

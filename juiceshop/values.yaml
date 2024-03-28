@@ -1,0 +1,9 @@
+image:
+  repository: bkimminich/juice-shop
+  tag: v16.0.0
+
+replicas: 1
+
+networking:
+  containerPort: 3000
+

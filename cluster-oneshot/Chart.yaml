@@ -1,0 +1,10 @@
+apiVersion: v2
+appVersion: 0.1.0
+description: NoSecurity.dev K8s cluster dependencies
+name: cluster-oneshot
+type: application
+version: 0.0.1
+dependencies:
+  - name: cloudnative-pg
+    version: 0.20.2
+    repository: https://cloudnative-pg.github.io/charts

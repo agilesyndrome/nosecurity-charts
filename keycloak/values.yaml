@@ -1,0 +1,13 @@
+image:
+  repository: "quay.io/keycloak/keycloak"
+  tag: "24.0.2"
+
+replicas: 1
+
+admin:
+  username: "admin"
+  password: "admin"
+
+networking:
+  containerPort: 8080
+

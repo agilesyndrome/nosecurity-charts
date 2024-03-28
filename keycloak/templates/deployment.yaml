@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    {{- include "keycloak.selectorLabels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "keycloak.selectorLabels" . | nindent 6 }}
+  replicas: {{ .Values.replicas }}
+  template:
+    metadata:
+      labels:
+        {{- include "keycloak.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ .Release.Name }}-sa
+      securityContext:
+        runAsUser: 65532
+      containers:
+        - name: {{ .Chart.Name }}
+          image: '{{ .Values.image.repository }}:{{ .Values.image.tag }}'
+          args: ["--config-file=/config/keycloak.conf", "start-dev"]
+          imagePullPolicy: "IfNotPresent"
+          securityContext:
+            runAsUser: 65532
+          ports:
+            - name: http
+              containerPort: {{ .Values.networking.containerPort }}
+          #livenessProbe:
+          #  httpGet:
+          #    path: /realms/master
+          #    port: 8080
+          readinessProbe:
+            httpGet:
+              path: /realms/master
+              port: 8080
+          env:
+            - name: DEPLOYMENT_TEMPLATE
+              value: "helm/{{ .Chart.Name }}"
+            - name: KEYCLOAK_ADMIN
+              value: "{{ .Values.admin.username }}"
+            - name: KEYCLOAK_ADMIN_PASSWORD
+              value: "{{ .Values.admin.password }}"
+            - name: KC_PROXY
+              value: "edge"
+          volumeMounts:
+            - name: config-volume
+              mountPath: /config
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 200m
+              memory: 256Mi
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ .Release.Name }}-config

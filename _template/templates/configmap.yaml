@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  labels:
+    {{- include "<CHARTNAME>.selectorLabels" . | nindent 4 }}
+data:
+  config.yml: |
+    foo: bar

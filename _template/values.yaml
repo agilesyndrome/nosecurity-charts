@@ -1,0 +1,9 @@
+image:
+  repository: busybox
+  tag: 1
+
+replicas: 1
+
+networking:
+  containerPort: 3000
+

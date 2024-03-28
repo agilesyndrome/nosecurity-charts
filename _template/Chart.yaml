@@ -1,0 +1,9 @@
+# This details information about the STARTER
+# and will be overwritten by the generator
+
+apiVersion: v2
+name: nosecurity-starter-generic
+description: A starter Helm Chart for the NoSecurity.dev platform
+type: application
+version: 0.0.1
+appVersion: "0.0.0"

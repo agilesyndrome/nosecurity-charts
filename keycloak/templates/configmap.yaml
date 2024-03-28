@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+  labels:
+    {{- include "keycloak.selectorLabels" . | nindent 4 }}
+data:
+  keycloak.conf: |
+    hostname-debug=false
+    health-enabled=true
+

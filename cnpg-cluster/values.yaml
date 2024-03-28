@@ -1,0 +1,12 @@
+
+
+replicas: 1
+storage: "1Gi"
+
+postgres:
+  #image: "ghcr.io/cloudnative-pg/postgresql"
+  #version: 16.2
+
+  image: "ghcr.io/cloudnative-pg/postgis"
+  version: 16
+
