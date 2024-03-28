@@ -1,0 +1,6 @@
+dependencies:
+- name: cnpg-cluster
+  repository: oci://ghcr.io/agilesyndrome/nosecurity-charts
+  version: 0.0.1
+digest: sha256:6d2438eee3c41b76fc3674eb14b9a357a93c25003bdc4fe7f53e29e9fc8ad5d1
+generated: "2024-03-28T12:37:44.4085-04:00"

@@ -1,18 +1,15 @@
 GPG_PASSPHRASE_FILE:=~/.gpgpw
+BUILD_DIR:=./dist
 
 login:
 	helm registry login https://ghcr.io
 
 clean:
-	@rm -rf ./dist
-	@mkdir -p ./dist
+	@rm -rf $(BUILD_DIR)
+	@mkdir -p $(BUILD_DIR)
 
 ci: clean build publish
-	helm repo index dist
-	@cp dist/index.yaml docs/index.yaml
-	@git add docs/index.yaml
-	git commit -S -m 'updated index.yaml'
-	git push
+	helm repo index $(BUILD_DIR)
 
 build:
 	@find . -type f -name "Chart.yaml" | sed 's:/Chart.yaml::g' | sed 's:^./::g' | grep -v '_template' | xargs -L 1 -I{} make build-{}
@@ -25,7 +22,7 @@ publish-%:
 
 build-%:
 	@helm package $* \
-		-d dist \
+		-d $(BUILD_DIR) \
 		--dependency-update \
 		--keyring ~/.gnupg/charts.gpg \
 		--passphrase-file $(GPG_PASSPHRASE_FILE)  \

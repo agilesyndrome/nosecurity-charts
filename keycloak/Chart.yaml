@@ -1,6 +1,10 @@
 apiVersion: v2
-appVersion: 0.1.0
+appVersion: 24.0.2
 description: A Helm chart for Keycloak
 name: keycloak
 type: application
-version: 24.0.2
+version: 0.0.2
+dependencies:
+  - name: cnpg-cluster
+    version: 0.0.1
+    repository: oci://ghcr.io/agilesyndrome/nosecurity-charts

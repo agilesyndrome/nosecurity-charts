@@ -3,13 +3,13 @@ entries:
   cluster-oneshot:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:30:41.508052-04:00"
+    created: "2024-03-28T12:38:49.093113-04:00"
     dependencies:
     - name: cloudnative-pg
       repository: https://cloudnative-pg.github.io/charts
       version: 0.20.2
     description: NoSecurity.dev K8s cluster dependencies
-    digest: fd23c55467c5ed7c6761c9cd651b882a2eefdd1e02dd2db89df9dc25f73a3837
+    digest: 74de903fe072611d0f5687a3de8713de427b92d8c5ca88145617936c9a38cdbe
     name: cluster-oneshot
     type: application
     urls:
@@ -18,9 +18,9 @@ entries:
   cnpg-cluster:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:30:41.508329-04:00"
+    created: "2024-03-28T12:38:49.093243-04:00"
     description: NoSecurity.dev Postgres cluster
-    digest: ca569ba38bbce5911de347ff6093997010907fa901397ccb8a7ab0a59ecd4bdf
+    digest: e8d46a5845432cd9ca87ab6c376c6191245978d485ec16e4f31d140c14c0a5af
     name: cnpg-cluster
     type: application
     urls:
@@ -29,9 +29,9 @@ entries:
   juiceshop:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:30:41.508634-04:00"
+    created: "2024-03-28T12:38:49.093391-04:00"
     description: A Helm chart for Kubernetes
-    digest: 83c24e735d9a9d553dd7104689f17c98d996779775a425fb5514c80db6796a0c
+    digest: 30a6cc96c8e3c5eb2ded37ae35cea65d3a38b6c685bd8f24ba256e1798e7881d
     name: juiceshop
     type: application
     urls:
@@ -39,13 +39,17 @@ entries:
     version: 0.1.0
   keycloak:
   - apiVersion: v2
-    appVersion: 0.1.0
-    created: "2024-03-28T12:30:41.508778-04:00"
+    appVersion: 24.0.2
+    created: "2024-03-28T12:38:49.093799-04:00"
+    dependencies:
+    - name: cnpg-cluster
+      repository: oci://ghcr.io/agilesyndrome/nosecurity-charts
+      version: 0.0.1
     description: A Helm chart for Keycloak
-    digest: 58976dfe309f33ae0ade5ee67d9e379aa6d56a802263095af2a1a7ce043ea00f
+    digest: afd4bb8306ad19e21044e2a3b67ea0d207cd6cc67d3d31b8f4c7e5d193ac4ca0
     name: keycloak
     type: application
     urls:
-    - keycloak-24.0.2.tgz
-    version: 24.0.2
-generated: "2024-03-28T12:30:41.504119-04:00"
+    - keycloak-0.0.2.tgz
+    version: 0.0.2
+generated: "2024-03-28T12:38:49.088728-04:00"

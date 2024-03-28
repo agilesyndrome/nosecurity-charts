@@ -4,4 +4,3 @@ description: NoSecurity.dev Postgres cluster
 name: cnpg-cluster
 type: application
 version: 0.0.1
-
