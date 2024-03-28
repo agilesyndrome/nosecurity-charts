@@ -3,13 +3,13 @@ entries:
   cluster-oneshot:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:30:00.54549-04:00"
+    created: "2024-03-28T12:30:41.508052-04:00"
     dependencies:
     - name: cloudnative-pg
       repository: https://cloudnative-pg.github.io/charts
       version: 0.20.2
     description: NoSecurity.dev K8s cluster dependencies
-    digest: 687d26d622e715a38912eea3da4f5ce1ebc2dedcd2584da73eede06cbc4d6f79
+    digest: fd23c55467c5ed7c6761c9cd651b882a2eefdd1e02dd2db89df9dc25f73a3837
     name: cluster-oneshot
     type: application
     urls:
@@ -18,9 +18,9 @@ entries:
   cnpg-cluster:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:30:00.545665-04:00"
+    created: "2024-03-28T12:30:41.508329-04:00"
     description: NoSecurity.dev Postgres cluster
-    digest: 8c58b43b8c4396126e780a9befc7236d824ca40fefb832017e75fd1c82ea6de6
+    digest: ca569ba38bbce5911de347ff6093997010907fa901397ccb8a7ab0a59ecd4bdf
     name: cnpg-cluster
     type: application
     urls:
@@ -29,9 +29,9 @@ entries:
   juiceshop:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:30:00.545843-04:00"
+    created: "2024-03-28T12:30:41.508634-04:00"
     description: A Helm chart for Kubernetes
-    digest: 337c2ecd132652e15d66cb649518b5f820d500e03bd030dd1080a80d5dfe3c35
+    digest: 83c24e735d9a9d553dd7104689f17c98d996779775a425fb5514c80db6796a0c
     name: juiceshop
     type: application
     urls:
@@ -40,12 +40,12 @@ entries:
   keycloak:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:30:00.546006-04:00"
+    created: "2024-03-28T12:30:41.508778-04:00"
     description: A Helm chart for Keycloak
-    digest: 2a902cd1c40b4d4943543911aefec18413320e6a0f9214ae7a7f987fa3757e11
+    digest: 58976dfe309f33ae0ade5ee67d9e379aa6d56a802263095af2a1a7ce043ea00f
     name: keycloak
     type: application
     urls:
     - keycloak-24.0.2.tgz
     version: 24.0.2
-generated: "2024-03-28T12:30:00.540004-04:00"
+generated: "2024-03-28T12:30:41.504119-04:00"
