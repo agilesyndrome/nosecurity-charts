@@ -3,13 +3,13 @@ entries:
   cluster-oneshot:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:10:53.783422-04:00"
+    created: "2024-03-28T12:30:00.54549-04:00"
     dependencies:
     - name: cloudnative-pg
       repository: https://cloudnative-pg.github.io/charts
       version: 0.20.2
     description: NoSecurity.dev K8s cluster dependencies
-    digest: 0ed8f754df35f2154c05273ac9be8778d9c7fd2253f89f48458863b45e615db1
+    digest: 687d26d622e715a38912eea3da4f5ce1ebc2dedcd2584da73eede06cbc4d6f79
     name: cluster-oneshot
     type: application
     urls:
@@ -18,9 +18,9 @@ entries:
   cnpg-cluster:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:10:53.783551-04:00"
+    created: "2024-03-28T12:30:00.545665-04:00"
     description: NoSecurity.dev Postgres cluster
-    digest: 05cf44ca463ef7c5cbb0ec0116de3252f44ce202a27025f27095e1574d2ed285
+    digest: 8c58b43b8c4396126e780a9befc7236d824ca40fefb832017e75fd1c82ea6de6
     name: cnpg-cluster
     type: application
     urls:
@@ -29,9 +29,9 @@ entries:
   juiceshop:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:10:53.783688-04:00"
+    created: "2024-03-28T12:30:00.545843-04:00"
     description: A Helm chart for Kubernetes
-    digest: 6554cf1e815808d6ec617c61f446951bfd083b9cf5bc37e939183439826a178c
+    digest: 337c2ecd132652e15d66cb649518b5f820d500e03bd030dd1080a80d5dfe3c35
     name: juiceshop
     type: application
     urls:
@@ -40,12 +40,12 @@ entries:
   keycloak:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-03-28T12:10:53.783823-04:00"
+    created: "2024-03-28T12:30:00.546006-04:00"
     description: A Helm chart for Keycloak
-    digest: 64f6f5a47c08b41b854f49a4af7c9b3f70f8c9713fa809b75435439abe9b9fc0
+    digest: 2a902cd1c40b4d4943543911aefec18413320e6a0f9214ae7a7f987fa3757e11
     name: keycloak
     type: application
     urls:
     - keycloak-24.0.2.tgz
     version: 24.0.2
-generated: "2024-03-28T12:10:53.778932-04:00"
+generated: "2024-03-28T12:30:00.540004-04:00"
